@@ -1,4 +1,3 @@
-/* メイン */
 .contents_wrap{
   display: flex;
 }
@@ -27,43 +26,12 @@
     margin-bottom: 15px;
     font-size: 1.8rem;
 }
-.main_content .p{
-  padding-bottom: 30px;
-}
-.simplebox1 {
-    border:3px dotted #000!important;
-    padding: 20px 25px;
-    padding-bottom: 0;
-    box-sizing: border-box;
-    width: 90%;
-    margin: 0 auto 40px auto;
-}
-.simplebox1 p{
-  padding-bottom: 10px;
-}
-.h3{
-  border-bottom: 2px dotted;
-  margin-bottom: 5px;
-}
-.check{
-  height: 16px;
-  width: 16px;
-  background-image: url("../public/checkbox.svg");
-  display: inline-block;
-}
-@media screen and (max-width:767px) {
+@media screen and (max-width:700px) {
   .contents_wrap .main_content{
-    width: 95%;
-    margin: 0 auto;
+    width: auto;
   }
   .li{
     width: 100%;
-  }
-  .contents_wrap{
-    display: block;
-  }
-  .main_content .h1{
-    font-size: 1.2rem;
   }
 }
 
@@ -81,30 +49,15 @@
   background-color: #fff;
   box-shadow:0px 1px 3px rgba(0,0,0,.18);
 }
-.side_content .h1{
-  font-size: 1.6rem
-}
 .contents_wrap .side_content .blog_img{
   background-color: #808080;
-  width: 120px;
   min-width: 120px;
   height: 80px;
   background-size: cover;
   background-position: center;
   margin-bottom: 0.5rem;
-  margin-left: 0.5rem;
 }
 .contents_wrap .side_content .blog_title{
-  /* width: 75%; */
-  box-sizing: content-box;
-  margin: 5px;
-}
-@media screen and (max-width:767px) {
-  .contents_wrap .side_content{
-    width: 95%;
-    margin: 0 auto;
-  }
-  .side_content .h1{
-    font-size: 1.2rem;
-  }
+  width: 75%;
+  margin: 10px;
 }
