@@ -1,10 +1,16 @@
 import Head from "next/head";
 import Header from '../components/header';
 import styles from "../styles/Home.module.css";
-import Script from 'next/script'
+import $ from 'jquery'
+import { useEffect } from 'react';
 import { client } from "../libs/client";
 import Link from 'next/link';
-export default function Home({ blog }) {
+export default function Home({ blog,news }) {
+  useEffect(() => {
+    $('[class*="Home_news_time"]').each(function(){
+      $(this).html($(this).html().slice(0, 10));
+  })
+   }, []);
   return (
     <div>
       <Head>
@@ -16,6 +22,16 @@ export default function Home({ blog }) {
       <div className={styles.contents_wrap}>
         <div className={styles.main_content}>
           <div className={styles.content}>
+          <h1 className={styles.h1}>お知らせ</h1>
+          <div className={styles.news_p}>
+            <ul>
+            {news.map((news) => (
+                <li className={styles.news_li} key={news.id}>
+                  <div className={styles.news_time}>{news.publishedAt}</div><div className={styles.news_title}>{news.news_title}</div>
+                </li>
+            ))}
+            </ul>
+          </div>
             <h1 className={styles.h1}>プロフィール</h1>
             <p className={styles.p}>
               はじめまして。KUMです。<br/>
@@ -35,7 +51,7 @@ export default function Home({ blog }) {
                 【実務経験あり】<br />
                 言語：HTML/CSS/Javascript<br />
                 ライブラリ：PlayWright/jQuery<br />
-                フレームワーク：-<br />
+                フレームワーク：Jest<br />
               </p>
               <p>
                 【自己学習等で成果物あり】<br />
@@ -134,11 +150,15 @@ export default function Home({ blog }) {
 }
 export const getStaticProps = async (context) => {
 
-  const data = await client.get({ endpoint: 'blog',queries: { limit: 3 }, });
+  const [blogData, newsData] = await Promise.all([
+    client.get({ endpoint: 'blog', queries: { limit: 3 } }),
+    client.get({ endpoint: 'news'}),
+  ]);
 
-    return {
+  return {
     props: {
-      blog: data.contents,
+      blog: blogData.contents,
+      news: newsData.contents,
     },
   };
 };

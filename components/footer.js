@@ -1,6 +1,6 @@
 import Link from 'next/link';
 // import styles from "../styles/header/Header.module.scss";
-const Header = () => {
+const Footer = () => {
   return (
     <>
 
@@ -8,4 +8,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Footer;

@@ -66,6 +66,31 @@
     font-size: 1.2rem;
   }
 }
+/* お知らせ */
+.news_li{
+  display: flex;
+  border-bottom: 1px solid #dddddd;
+  margin-bottom: 0;
+}
+.news_time{
+  width: 100px;
+}
+.news_p{
+  border: 1px solid #000;
+  height: 100px;
+  padding: 10px 15px;
+  padding-bottom: 0;
+  box-sizing: border-box;
+  width: 90%;
+  margin: 0 auto 40px auto;
+  overflow: auto;
+}
+@media screen and (max-width:767px) {
+  .news_p{
+    padding: 5px 5px;
+  }
+}
+
 
 /* サイド  */
 .contents_wrap .side_content{
