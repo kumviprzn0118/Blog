@@ -36,6 +36,7 @@ body {
 .main_content {
   flex: 2;
   margin-right: 1rem;
+
 }
 
 .side_content {
@@ -103,10 +104,12 @@ a:hover {
 
   .main_content {
     margin-right: 0;
+    width: 100%;
   }
 
   .side_content {
     margin-top: 2rem;
+    width: 100%;
   }
 }
   /* Navbar & Navmenu color */
@@ -254,4 +257,21 @@ a:hover {
   }
   .space{
     padding-top: 52px;
+  }
+
+  .category_ul{
+    justify-content: flex-end;
+  }
+  .category_list{
+    width: fit-content;
+    border: 1px solid;
+    padding: 1px 8px;
+    border-radius: 15px;
+    margin: 2px;
+    float: left;
+  }
+  
+  .code{
+    background-color: #000;
+    color: #fff;
   }

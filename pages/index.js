@@ -5,7 +5,7 @@ import $ from 'jquery'
 import { useEffect } from 'react';
 import { client } from "../libs/client";
 import Link from 'next/link';
-export default function Home({ blog,news }) {
+export default function Home({ blog,news,category }) {
   useEffect(() => {
     $('[class*="Home_news_time"]').each(function(){
       $(this).html($(this).html().slice(0, 10));
@@ -40,7 +40,7 @@ export default function Home({ blog,news }) {
             </p>
             <div className={styles.simplebox1}>
               <p>名前 : KUM</p>
-              <p>年齢 : 20代</p>
+              <p>年齢 : 20代後半</p>
               <p>出身 : 宮崎</p>
               <p>職業 : Web制作エンジニア</p>
               <p>趣味 : スポーツ観戦・プログラミング・数学</p>
@@ -63,8 +63,8 @@ export default function Home({ blog,news }) {
             <h3 className={styles.h3}><i className={styles.check}></i>高校から大学進学まで</h3>
             <p className={styles.p}>
               高校時代は普通科に通っていました。ごく普通の地味な学生でした。<br />
-              高校3年生のときにはいろいろあって殆ど勉強できませんでしたが、自分の能力を信じて九州大学受験！
-              結果はあっけなく失敗に終わりましたが、なんとか後期で地方の国立大学に合格したのでその大学へ行きました<br />
+              高校3年生のときにはいろいろあって殆ど勉強できませんでしたが、自分の能力を信じて九州大学受験！<br />
+              結果は失敗に終わりましたが、なんとか後期で地方の国立大学に合格したのでその大学へ行きました。<br />
             </p>
             <h3 className={styles.h3}><i className={styles.check}></i>大学時代</h3>
             <p className={styles.p}>
@@ -134,13 +134,23 @@ export default function Home({ blog,news }) {
               {blog.map((blog) => (
                 <li className={styles.li} key={blog.id}>
                   <Link className={styles.link} href={`/blog/${blog.id}`}>
-                  <div className={styles.blog_img}>{blog.image}</div>
+                  <div className={styles.blog_img}></div>
                   <div className={styles.blog_title}>{blog.title}</div>
                   </Link>
                 </li>
               ))}
             </ul>
             <a className={styles.motto} href="/blog/list">もっとみる</a>
+          </div>
+          <div className={styles.content}>
+            <h1 className={styles.h1}>カテゴリー</h1>
+            <ul className="category_ul">
+              {category.map((category) => (
+                <li className="category_list" key={category.id}>
+                  <Link href={`/category/${category.id}`}>{category.name}</Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
@@ -150,15 +160,17 @@ export default function Home({ blog,news }) {
 }
 export const getStaticProps = async (context) => {
 
-  const [blogData, newsData] = await Promise.all([
+  const [blogData, newsData,categoryData] = await Promise.all([
     client.get({ endpoint: 'blog', queries: { limit: 3 } }),
     client.get({ endpoint: 'news'}),
+    client.get({ endpoint: "categories" }),
   ]);
 
   return {
     props: {
       blog: blogData.contents,
       news: newsData.contents,
+      category:categoryData.contents
     },
   };
 };

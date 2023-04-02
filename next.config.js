@@ -1,17 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-}
-
-module.exports = nextConfig
+};
 
 const webpack = require('webpack');
 
 module.exports = {
-  plugins: [
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-    }),
-  ],
+  ...nextConfig,
+  webpack: (config) => {
+    config.plugins.push(
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+      })
+    );
+    return config;
+  },
 };

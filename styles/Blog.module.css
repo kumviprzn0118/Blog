@@ -1,0 +1,11 @@
+.category_ul{
+  display: flex;
+  justify-content: flex-end;
+}
+.category_list{
+  width: fit-content;
+  border: 1px solid;
+  padding: 1px 8px;
+  border-radius: 15px;
+  margin: 2px;
+}

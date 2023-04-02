@@ -1,13 +1,17 @@
 import Head from "next/head";
 import { client } from "../../libs/client";
 import Header from '../../components/header';
+import Link from 'next/link';
+import styles from "../../styles/Blog.module.css";
 import { useEffect } from 'react';
 import $ from 'jquery'
-export default function BlogId({ blog }) {
+export default function BlogId({ blog,category }) {
   useEffect(() => {
     // $('.kiji').each(function(){
     //   $(this).html($(this).text())
     // });
+    console.log(category)
+    console.log(blog.category)
     $('.kiji').each(function(){
       $(this).html($(this).html().replace(/\n/g,"<br>"))
   })
@@ -23,6 +27,15 @@ export default function BlogId({ blog }) {
     <div className="contents_wrap">
       <div className="main_content">
         <div className="content">
+        <div className="category_area">
+          <ul className={styles.category_ul}>
+            {blog.category.map((category) => (
+              <li className={styles.category_list} key={category.id}>
+                {category.name}
+              </li>
+            ))}
+          </ul>
+        </div>
           <div className="section">
             <h1>{blog.cotent_title1}</h1>
             <div className="kiji">
@@ -51,11 +64,9 @@ export default function BlogId({ blog }) {
       </div>
       <div className="side_content">
       <div className="content">
-
-        <a href="/blog/list">もっとみる</a>
       </div>
       <div className="content">
-        
+
       </div>
       <div className="content"></div>
       </div>
@@ -76,10 +87,12 @@ export const getStaticPaths = async () => {
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async (context) => {
   const id = context.params.id;
-  const data = await client.get({ endpoint: "blog", contentId: id });
+  const blogData = await client.get({ endpoint: "blog", contentId: id });
+  const categoryData = await client.get({ endpoint: "categories"});
   return {
     props: {
-      blog: data,
+      blog: blogData,
+      category: categoryData.contents,
     },
   };
 };

@@ -1,13 +1,22 @@
 import Head from "next/head";
 import Header from '../../components/header';
 import Link from 'next/link';
+import Image from 'next/image';
+import $ from 'jquery'
+import { useEffect } from 'react';
 import { client } from "../../libs/client";
 import Script from 'next/script'
 export default function Home({ blog }) {
+  useEffect(() => {
+    console.log(blog[0].image.url)
+    $('.blog_publish_time').each(function(){
+      $(this).html($(this).html().slice(0, 10));
+  })
+   }, []);
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title> - 記事一覧</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
@@ -20,7 +29,7 @@ export default function Home({ blog }) {
             {blog.map((blog) => (
               <li key={blog.id}>
                 <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
-                <span>({blog.publishedAt})</span>
+                (<span className="blog_publish_time">{blog.publishedAt}</span>)
               </li>
             ))}
           </ul>
