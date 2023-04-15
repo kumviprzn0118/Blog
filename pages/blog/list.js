@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Header from '../../components/header';
 import Link from 'next/link';
-import Image from 'next/image';
+import styles from "../../styles/BlogList.module.css";
 import $ from 'jquery'
 import { useEffect } from 'react';
 import { client } from "../../libs/client";
@@ -27,9 +27,11 @@ export default function Home({ blog }) {
           <h2>記事一覧</h2>
           <ul>
             {blog.map((blog) => (
-              <li key={blog.id}>
-                <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
-                (<span className="blog_publish_time">{blog.publishedAt}</span>)
+              <li className={styles.blog_list} key={blog.id}>
+                  <Link className={styles.link} href={`/blog/${blog.id}`}>
+                  <div className={styles.blog_img} style={{backgroundImage: `url(${blog.image.url})`}}></div>
+                  <div className={styles.blog_title}>{blog.title}</div>
+                  </Link>
               </li>
             ))}
           </ul>

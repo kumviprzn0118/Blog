@@ -26,6 +26,7 @@
     margin-bottom: 15px;
     font-size: 1.8rem;
 }
+
 @media screen and (max-width:700px) {
   .contents_wrap .main_content{
     width: auto;
@@ -34,7 +35,27 @@
     width: 100%;
   }
 }
-
+/* ブロック */
+.link{
+  width: 100%;
+  display: flex;
+}
+.blog_img {
+  width: 160px;
+  height: 90px;
+  min-width: 160px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ddd;
+  margin: 5px;
+}
+.blog_list{
+  border: 1px solid #ddd;
+}
+.blog_title{
+  margin: 5px;
+}
 /* サイド  */
 .contents_wrap .side_content{
   width:35%;

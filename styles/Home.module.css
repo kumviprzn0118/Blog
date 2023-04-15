@@ -98,6 +98,7 @@
   margin: 40px 30px 30px 30px;
 }
 .contents_wrap .side_content .link{
+  width: 100%;
   display: flex;
 }
 .contents_wrap .side_content .li{
@@ -116,8 +117,8 @@
   height: 80px;
   background-size: cover;
   background-position: center;
-  margin-bottom: 0.5rem;
-  margin-left: 0.5rem;
+  margin:5px;
+  border:1px solid #dddddd;
 }
 .contents_wrap .side_content .blog_title{
   /* width: 75%; */

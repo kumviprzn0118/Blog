@@ -7,9 +7,6 @@ import { useEffect } from 'react';
 import $ from 'jquery'
 export default function BlogId({ blog,category }) {
   useEffect(() => {
-    // $('.kiji').each(function(){
-    //   $(this).html($(this).text())
-    // });
     console.log(category)
     console.log(blog.category)
     $('.kiji').each(function(){

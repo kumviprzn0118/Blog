@@ -112,7 +112,7 @@ export default function Home({ blog,news,category }) {
             </p>
             <h1 className={styles.h1}>ブログについて</h1>
             <p className={styles.p}>
-              このブログを作った理由は主にこの２つです。
+              このブログを作った理由は主にこの3つです。
             </p>
             <div className={styles.simplebox1}>
               <p>●Next.js、Reactの学習のため</p>
@@ -134,7 +134,7 @@ export default function Home({ blog,news,category }) {
               {blog.map((blog) => (
                 <li className={styles.li} key={blog.id}>
                   <Link className={styles.link} href={`/blog/${blog.id}`}>
-                  <div className={styles.blog_img}></div>
+                  <div className={styles.blog_img} style={{backgroundImage: `url(${blog.image.url})`}}></div>
                   <div className={styles.blog_title}>{blog.title}</div>
                   </Link>
                 </li>
