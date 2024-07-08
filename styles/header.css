@@ -6,7 +6,7 @@
 }
 
 /* Global styles */
-body {
+.all_wrap {
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
@@ -65,23 +65,23 @@ body {
   margin-bottom: 0.5rem;
 }
 
-ul {
+.ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-li {
+.li {
   margin-bottom: 0.5rem;
 }
 
-a {
+.a {
   color: #333;
   font-weight: bold;
   display: inline-block;
 }
 
-a:hover {
+.a:hover {
   color: #0077cc;
 }
 /* Footer styles */
@@ -262,6 +262,7 @@ a:hover {
     justify-content: flex-end;
   }
   .category_list{
+    list-style-type: none;
     width: fit-content;
     border: 1px solid;
     padding: 1px 8px;

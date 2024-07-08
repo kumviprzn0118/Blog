@@ -12,7 +12,7 @@ export default function Home({ blog,news,category }) {
   })
    }, []);
   return (
-    <div>
+    <div className={styles.all_wrap}>
       <Head>
         <title>Profile</title>
         <link rel="icon" href="/favicon.ico" />
@@ -24,7 +24,7 @@ export default function Home({ blog,news,category }) {
           <div className={styles.content}>
           <h1 className={styles.h1}>お知らせ</h1>
           <div className={styles.news_p}>
-            <ul>
+            <ul className={styles.ul}>
             {news.map((news) => (
                 <li className={styles.news_li} key={news.id}>
                   <div className={styles.news_time}>{news.publishedAt}</div><div className={styles.news_title}>{news.news_title}</div>
@@ -120,7 +120,7 @@ export default function Home({ blog,news,category }) {
             <h1 className={styles.h1}>カテゴリー</h1>
             <ul className="category_ul">
               {category.map((category) => (
-                <li className="category_list" key={category.id}>
+                <li className="category_list li" key={category.id}>
                   <Link href={`/category/${category.id}`}>{category.name}</Link>
                 </li>
               ))}

@@ -26,8 +26,8 @@ export default function Home({ blog,newblog }) {
           <h2>記事一覧</h2>
           <ul>
             {blog.map((blog) => (
-              <li key={blog.id}>
-                <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
+              <li className="li" key={blog.id}>
+                <Link className="a" href={`/blog/${blog.id}`}>{blog.title}</Link>
               </li>
             ))}
           </ul>
@@ -40,8 +40,8 @@ export default function Home({ blog,newblog }) {
             <h1> 最近の投稿</h1>
             <ul>
               {newblog.map((blog) => (
-                <li key={blog.id}>
-                  <Link href={`/blog/${blog.id}`}>
+                <li className="li" key={blog.id}>
+                  <Link className="a" href={`/blog/${blog.id}`}>
                   <div>{blog.title}</div>
                   </Link>
                 </li>

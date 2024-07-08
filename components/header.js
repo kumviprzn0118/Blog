@@ -10,17 +10,17 @@ const Header = () => {
     <input type="checkbox" className="menu-btn" id="menu-btn"/>
     <label htmlFor="menu-btn" className="menu-icon"><span className="navicon"></span></label>
     <ul className="menu">
-      <li>
+      <li className="li">
         <Link href="/">
           Home
         </Link>
       </li>
-      <li>
+      <li className="li">
         <Link href="/blog/list">
           Blog
         </Link>
       </li>
-      <li>
+      <li className="li">
         <Link target="_blank" href="https://github.com/vipRznChan">
           Github
         </Link>
