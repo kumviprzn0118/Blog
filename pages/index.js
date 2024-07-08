@@ -34,15 +34,15 @@ export default function Home({ blog,news,category }) {
           </div>
             <h1 className={styles.h1}>プロフィール</h1>
             <p className={styles.p}>
-              はじめまして。KUMです。<br/>
+              はじめまして。隈元 祐輔といいます。<br/>
               プロフィールを見ていただき、ありがとうございます。<br/>
               自己紹介をさせていただきます。
             </p>
             <div className={styles.simplebox1}>
-              <p>名前 : KUM</p>
+              <p>名前 : 隈元 祐輔</p>
               <p>年齢 : 20代後半</p>
               <p>出身 : 宮崎</p>
-              <p>職業 : Web制作エンジニア</p>
+              <p>職業 : Web開発エンジニア</p>
               <p>趣味 : スポーツ観戦・プログラミング・数学</p>
             </div>
             <h1 className={styles.h1}>スキル</h1>
@@ -62,8 +62,6 @@ export default function Home({ blog,news,category }) {
             <h3 className={styles.h3}><i className={styles.check}></i>大学時代</h3>
             <p className={styles.p}>
               高校時代はパソコンを所持しておらず学校で習ったExcel/Word/PowerPointくらいしかできませんでした。<br />
-              当時プログラミングできてたら滅茶苦茶ハマっていただろうなと思います。<br />
-              大学入学後、遂に自分のパソコン手に入れました！<br />
               大学の講義で初めてプログラミングをしました。言語はC#。<br />
               大学2年くらいのときにUnityが流行り始めたので、協力してゲーム作って遊んだりもしました。<br />
               大学の専攻は化学系でした。講義も段々難しくなり、研究にも時間を取られ<br />
@@ -72,34 +70,33 @@ export default function Home({ blog,news,category }) {
             <h3 className={styles.h3}><i className={styles.check}></i>就職</h3>
             <p className={styles.p}>
               就活で最終的に選んだ会社は、関東にあるプラント系の企業でした。<br />
-              しかし、就職直後にコロナが流行りはじめたのでずっと寮内で過ごすことに・・・<br />
+              就職直後にコロナが流行りはじめたのでずっと寮内で過ごし<br />
               そこでプログラミングを再開したところかなりハマってしまい転職を決意しました。<br />
             </p>
             <h3 className={styles.h3}><i className={styles.check}></i>職業訓練校</h3>
             <p className={styles.p}>、
-            仕事をやめ、基礎から学び直したいなと思い約半年間IT系の訓練校に行きました。<br />
-            授業の内容は自己啓発的な事2割、IT系のことが6割、就活関連が2割って感じでした。<br />
-            講師は元エンジニアで今は会社持って経営してて空いた時間に講義してますって人がたくさんでした。<br />
-            社会人トップの人からプログラミング以外のこともたくさん聞けて、とても貴重な時間でした。<br />
+            仕事をやめ、コロナの様子を見ながら基礎から学び直したいなと思い約半年間IT系の訓練校に行きました。<br />
             そこで「君なかなかできるね！」と褒めて伸ばされ先生の紹介で無事就職しました。<br />
             </p>
             <h3 className={styles.h3}><i className={styles.check}></i>再就職</h3>
             <p className={styles.p}>
               訓練校を卒業した時点ではHTML/CSS/Javascriptを軽く書ける程度でした。<br />
-              1年目は簡単なJavascriptから。<br />
-              2年目はNode.jsを使ってデータ入力を自動化したり、外部とAPIの連携をしたり<br />
-              自分のレベルにあった案件が回ってきて順調に成長することができました。
+              1年目は簡単なJavascriptからでフロントエンドの実装<br />
+              2年目はRPAに関心を持ち、データ入力の自動化<br />
+              3年目からは成長が停滞しはじめたのでAWS等の勉強をしていました。
             </p>
-            <h3 className={styles.h3}><i className={styles.check}></i>現在の夢</h3>
+            <h3 className={styles.h3}><i className={styles.check}></i>現在の目標</h3>
             <p className={styles.p}>
-              今はエンジニア3年目ですが、まだまだ駆け出しです。<br />
-              多くの経験を積んで一人前のエンジニアになることが第一の目標。<br />
-              第二の目標は「いい生活をしたい」ってところです。<br />
+              現在の会社に入って4年目になりました。<br />
+              1.給料を上げたい生活を豊かにしたい<br />
+              2.人格面を磨きたい<br />
+              3.もっと色んなことができるようになりたい<br />
+              これが現在の目標です。<br />
             </p>
             <h1 className={styles.h1}>ブログについて</h1>
             <p className={styles.p}>
-              せっかく作ったブログですが、学習用に作ったので運用はしないです。<br />
-              Qiita等のサービスがあるのでそちらで活動したいと思います・<br />
+              せっかく作ったブログですが、学習用兼就活用に作ったのとデザイン面で運用はしないです。<br />
+              Qiita等のサービスがあるのでそちらで活動したいと思います<br />
               最後まで読んでいただき、ありがとうございました。
             </p>
           </div>
