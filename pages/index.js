@@ -74,7 +74,7 @@ export default function Home({ blog,news,category }) {
               そこでプログラミングを再開したところかなりハマってしまい転職を決意しました。<br />
             </p>
             <h3 className={styles.h3}><i className={styles.check}></i>職業訓練校</h3>
-            <p className={styles.p}>、
+            <p className={styles.p}>
             仕事をやめ、コロナの様子を見ながら基礎から学び直したいなと思い約半年間IT系の訓練校に行きました。<br />
             そこで「君なかなかできるね！」と褒めて伸ばされ先生の紹介で無事就職しました。<br />
             </p>
