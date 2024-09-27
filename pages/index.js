@@ -34,12 +34,12 @@ export default function Home({ blog,news,category }) {
           </div>
             <h1 className={styles.h1}>プロフィール</h1>
             <p className={styles.p}>
-              はじめまして。隈元 祐輔といいます。<br/>
+              はじめまして。Kumaといいます。<br/>
               プロフィールを見ていただき、ありがとうございます。<br/>
               自己紹介をさせていただきます。
             </p>
             <div className={styles.simplebox1}>
-              <p>名前 : 隈元 祐輔</p>
+              <p>名前 : Kuma</p>
               <p>年齢 : 20代後半</p>
               <p>出身 : 宮崎</p>
               <p>職業 : Web開発エンジニア</p>
@@ -49,13 +49,12 @@ export default function Home({ blog,news,category }) {
             <div className={styles.simplebox1}>
               <p>
                 【実務経験あり】<br />
-                言語：HTML/CSS/Javascript<br />
-                ライブラリ：PlayWright/jQuery<br />
-                フレームワーク：Jest<br />
+                言語：HTML/CSS/Javascript(jQuery)<br />
               </p>
               <p>
                 【自己学習等で成果物あり】<br />
-                ライブラリ：React.js<br/>
+                React.js×Next.js(このサイト)<br/>
+                Vue.js×Typescript×AWS(<a href="https://kuma-spatest.com">https://kuma-spatest.com/</a>)
               </p>
             </div>
             <h1 className={styles.h1}>経歴</h1>
@@ -95,7 +94,7 @@ export default function Home({ blog,news,category }) {
             </p>
             <h1 className={styles.h1}>ブログについて</h1>
             <p className={styles.p}>
-              せっかく作ったブログですが、学習用兼就活用に作ったのとデザイン面で運用はしないです。<br />
+              せっかく作ったブログですが、学習用のためなので運用はしないです。<br />
               Qiita等のサービスがあるのでそちらで活動したいと思います<br />
               最後まで読んでいただき、ありがとうございました。
             </p>
