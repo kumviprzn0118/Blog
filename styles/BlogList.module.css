@@ -52,6 +52,7 @@
 }
 .blog_list{
   border: 1px solid #ddd;
+  list-style-type:none ;
 }
 .blog_title{
   margin: 5px;

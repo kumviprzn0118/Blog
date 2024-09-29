@@ -23,6 +23,9 @@ export default function BlogId({ blog,category }) {
     <main>
     <div className="contents_wrap">
       <div className="main_content">
+
+        <h4 dangerouslySetInnerHTML={{ __html: blog.title }}></h4>
+
         <div className="content">
         <div className="category_area">
           <ul className={styles.category_ul}>

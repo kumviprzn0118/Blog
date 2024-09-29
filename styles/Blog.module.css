@@ -4,6 +4,7 @@
 }
 .category_list{
   width: fit-content;
+  list-style-type: none;
   border: 1px solid;
   padding: 1px 8px;
   border-radius: 15px;
