@@ -88,7 +88,7 @@ export default function Home({ blog,news,category }) {
               現在の会社に入って4年目になりました。<br />
               1.給料を上げ生活を豊かにしたい<br />
               2.エンジニアとしての市場価値を高めたい<br />
-              3.もっと色んなことができるようになりたい<br />
+              3.もっと難しいことを経験したい<br />
               これが現在の目標です。<br />
             </p>
             <h1 className={styles.h1}>ブログについて</h1>
