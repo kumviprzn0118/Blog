@@ -21,7 +21,7 @@ const Header = () => {
         </Link>
       </li>
       <li className="li">
-        <Link target="_blank" href="https://github.com/vipRznChan">
+        <Link target="_blank" href="https://github.com/kumviprzn0118">
           Github
         </Link>
       </li>
