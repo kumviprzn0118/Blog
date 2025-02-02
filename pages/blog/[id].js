@@ -36,30 +36,6 @@ export default function BlogId({ blog,category }) {
             ))}
           </ul>
         </div>
-          <div className="section">
-            <h1>{blog.cotent_title1}</h1>
-            <div className="kiji">
-            <div dangerouslySetInnerHTML={{ __html: blog.content }}></div>
-            </div>
-          </div>
-          <div className="section">
-            <h1>{blog.cotent_title2}</h1>
-            <div className="kiji">
-            <div dangerouslySetInnerHTML={{ __html: blog.content2 }}></div>
-            </div>
-          </div>
-          <div className="section">
-            <h1>{blog.cotent_title3}</h1>
-            <div className="kiji">
-            <div dangerouslySetInnerHTML={{ __html: blog.content3 }}></div>
-            </div>
-          </div>
-          <div className="section">
-            <h1>{blog.cotent_title4}</h1>
-            <div className="kiji">
-            <div dangerouslySetInnerHTML={{ __html: blog.content4 }}></div>
-            </div>
-          </div>
         </div>
       </div>
       <div className="side_content">

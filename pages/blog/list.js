@@ -29,7 +29,7 @@ export default function Home({ blog }) {
             {blog.map((blog) => (
               <li className={styles.blog_list} key={blog.id}>
                   <Link className={styles.link} href={`/blog/${blog.id}`}>
-                  <div className={styles.blog_img} style={{backgroundImage: `url(${blog.image.url})`}}></div>
+                  <img src="{blog.image.url}"/>
                   <div className={styles.blog_title}>{blog.title}</div>
                   </Link>
               </li>
