@@ -26,7 +26,7 @@ export default function Home({ blog,category }) {
       <Header/>
       <main>
         <ul>
-          <Swiper1 image={["/jiko.png","/jiko.png","/jiko.png"]}></Swiper1>
+          <Swiper1 image={["/jikogakusyu.png","/jikogakusyu.png","/jikogakusyu.png"]}></Swiper1>
         </ul>
       <div className={styles.contents_wrap}>
         <div className={styles.main_content}>
