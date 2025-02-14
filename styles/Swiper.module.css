@@ -1,28 +1,2 @@
-.Swiper1{
-  width: 100%;
-  .SwiperSlide{
-    width: 100%;
-  }
-  .image{
-    width: 100%;
-  }
-}
 
-.Swiper2{
-  width: 100%;
-  .swiper-wrapper{
-    .swiper-slide{
-
-    }
-  }
-  .SwiperSlide{
-    width: 100%;
-  }
-  .swiper-pagination{
-    position: unset;
-  } 
-  .image{
-    width: 100%;
-  }
-}
 

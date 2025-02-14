@@ -4,26 +4,26 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 // Paginationモジュールをインポート
 import { Pagination } from 'swiper/modules';
-import styles from "../styles/Swiper.module.css";
 
 const Swiper1 = ({image}) => {
   return (
     <>
       <Swiper
-            className={styles.Swiper1}
-            spaceBetween={50}
+            className='Swiper1'
+            spaceBetween={500}
             slidesPerView={1}
+            centeredSlides={true}
             onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log(swiper)}
             modules={[Pagination]}
             pagination={{
-              type: "fraction",
+              clickable: false
             }}
             loop={true}
       >
           {image.map((img,i) => (
-            <SwiperSlide className={styles.SwiperSlide} key={'head_'+i}>
-                <img className={styles.image} src={img} /> 
+            <SwiperSlide key={'head_'+i}>
+                <img src={img} /> 
             </SwiperSlide>
           ))}
       </Swiper>

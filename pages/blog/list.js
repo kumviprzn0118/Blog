@@ -8,7 +8,6 @@ import { client } from "../../libs/client";
 import Script from 'next/script'
 export default function Home({ blog }) {
   useEffect(() => {
-    console.log(blog[0].image.url)
     $('.blog_publish_time').each(function(){
       $(this).html($(this).html().slice(0, 10));
   })
@@ -29,8 +28,14 @@ export default function Home({ blog }) {
             {blog.map((blog) => (
               <li className={styles.blog_list} key={blog.id}>
                   <Link className={styles.link} href={`/blog/${blog.id}`}>
-                  <img src="{blog.image.url}"/>
+                  {blog.image && blog.image.url && (
+                  <img className={styles.img} src={blog.image.url} alt={blog.title} />
+                  )}
+                  <div className="wrap_info">
                   <div className={styles.blog_title}>{blog.title}</div>
+                  <div className={styles.day}>更新日：{blog.title}</div>
+                  <div dangerouslySetInnerHTML={{ __html: blog.detail }} />
+                  </div>
                   </Link>
               </li>
             ))}

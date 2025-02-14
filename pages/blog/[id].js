@@ -2,7 +2,7 @@ import Head from "next/head";
 import { client } from "../../libs/client";
 import Header from '../../components/header';
 import Link from 'next/link';
-import styles from "../../styles/Blog.module.css";
+// import styles from "../../styles/Blog.module.css";
 import { useEffect } from 'react';
 import $ from 'jquery'
 export default function BlogId({ blog,category }) {
@@ -20,22 +20,23 @@ export default function BlogId({ blog,category }) {
     <link rel="icon" href="/favicon.ico" />
     </Head>
     <Header/>
-    <main>
+    <main id="blog">
     <div className="contents_wrap">
       <div className="main_content">
 
-        <h4 className="title" dangerouslySetInnerHTML={{ __html: blog.title }}></h4>
+        <h1 className="title" dangerouslySetInnerHTML={{ __html: blog.title }}></h1>
 
         <div className="content">
-        <div className="category_area">
-          <ul className={styles.category_ul}>
-            {blog.category.map((category) => (
-              <li className={styles.category_list} key={category.id}>
-                {category.name}
-              </li>
-            ))}
-          </ul>
-        </div>
+          <div className="category_area">
+            <ul className="category_ul">
+              {blog.category.map((category) => (
+                <li className="category_list" key={category.id}>
+                  {category.name}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="blog_area" dangerouslySetInnerHTML={{ __html: blog.content }}></div>
         </div>
       </div>
       <div className="side_content">

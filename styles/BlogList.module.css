@@ -37,8 +37,10 @@
 }
 /* ブロック */
 .link{
+  padding: 15px;
   width: 100%;
   display: flex;
+  gap: 20px;
 }
 .blog_img {
   width: 160px;
@@ -53,6 +55,7 @@
 .blog_list{
   border: 1px solid #ddd;
   list-style-type:none ;
+  margin: 5px;
 }
 .blog_title{
   margin: 5px;

@@ -5,13 +5,12 @@ import Link from 'next/link';
 // Paginationモジュールをインポート
 import { Pagination } from 'swiper/modules';
 import styles from "../styles/Swiper.module.css";
-
 const Swiper2 = ({data}) => {
   return (
     <>
       <Swiper
-            className={styles.Swiper2}
-            spaceBetween={50}
+            className='Swiper2'
+            spaceBetween={15}
             centeredSlides={true}
             slidesPerView={1}
             onSlideChange={() => console.log('slide change')}
@@ -23,23 +22,34 @@ const Swiper2 = ({data}) => {
             pagination={{
               clickable: true
             }}
+            breakpoints={{
+              990: {
+                slidesPerView: 2,
+                spaceBetween: 50
+              }
+            }}
       >
           {data.map((blog,i) => (
             <SwiperSlide key={blog.id}>
-                <figure>
                 <Link href={`/blog/${blog.id}`}>
-                <img className={styles.image} src={blog.image.url}/>
-                </Link>
+                <figure>
+             
+                {blog.image && blog.image.url && (
+                  <img className={styles.img} src={blog.image.url} alt={blog.title} />
+                )}
+                
                 </figure>
                 <figcaption>
-                <Link href={`/blog/${blog.id}`}>
                     <h3>{blog.title}</h3>
-                </Link>
                 <div dangerouslySetInnerHTML={{ __html: blog.detail }} />
                 </figcaption>
+                </Link>
             </SwiperSlide>
           ))}
+      <div className="swiper-button-prev"></div>
+      <div className="swiper-button-next"></div>
       </Swiper>
+
     </>
   );
 };

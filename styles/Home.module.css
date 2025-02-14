@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
 /* Global styles */
 .all_wrap {
   font-family: "Noto Sans JP", serif;
   font-size: 16px;
   line-height: 1.5;
   color: #333;
-  background-color: #f5f5f5;
+  background-color: #f0f4f9;
 }
 
 /* Header styles */
@@ -42,6 +42,7 @@
   padding: 1rem;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 
 /* Blog list styles */
@@ -297,7 +298,7 @@
   text-align: center;
 }
 .main_content .h1{
-   border-left: 5px solid #000!important;
+   border-left: 5px solid #4b4b4b!important;
     padding-left: 15px;
     margin-bottom: 15px;
     font-size: 1.8rem;
@@ -306,7 +307,7 @@
   padding-bottom: 30px;
 }
 .simplebox1 {
-    border:3px dotted #000!important;
+    border:3px dotted #4b4b4b!important;
     padding: 20px 25px;
     padding-bottom: 0;
     box-sizing: border-box;
@@ -352,7 +353,7 @@
   width: 100px;
 }
 .news_p{
-  border: 1px solid #000;
+  border: 1px solid #4b4b4b;
   height: 100px;
   padding: 10px 15px;
   padding-bottom: 0;
