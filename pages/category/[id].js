@@ -43,7 +43,7 @@ export default function Home({ blog,newblog }) {
                 <li className="li" key={blog.id}>
                   <Link className="a" href={`/blog/${blog.id}`}>
                   {blog.image && blog.image.url && (
-                  <img className={styles.img} src={blog.image.url} alt={blog.title} />
+                  <img src={blog.image.url} alt={blog.title} />
                   )}
                   <div>{blog.title}</div>
                   </Link>
