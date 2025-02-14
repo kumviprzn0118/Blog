@@ -65,6 +65,9 @@
               color: var(--swiper-slide-color);
               font-size: 18px;
             }
+            div{
+              font-weight: normal;
+            }
           }
         }
       }
