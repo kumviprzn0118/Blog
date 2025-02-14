@@ -14,7 +14,7 @@ export default function Home({ blog,news,category }) {
   return (
     <div className={styles.all_wrap}>
       <Head>
-        <title>Profile</title>
+        <title>Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>

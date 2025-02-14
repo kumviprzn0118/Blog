@@ -5,15 +5,15 @@
 /* Swiper */
   .Swiper1{
     margin-top: 40px;
-    max-width: 1024px;
+    /* max-width: 1024px; */
     .swiper-wrapper{
-      max-width: 1024px;
+      /* max-width: 1024px; */
       .swiper-slide{
         margin: 0 auto;
         text-align: center;
         z-index: -1;
         img{
-          width: 800px;
+          /* width: 800px; */
         }
       }
     }

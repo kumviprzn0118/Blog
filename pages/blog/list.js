@@ -15,7 +15,7 @@ export default function Home({ blog }) {
   return (
     <div>
       <Head>
-        <title> - 記事一覧</title>
+        <title>記事一覧</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
