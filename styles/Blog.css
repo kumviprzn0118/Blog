@@ -48,7 +48,14 @@
         margin-left: 1rem;
       }
     }
-
+    pre[class*="language-"] {
+      padding: 1em;
+      margin: .5em 0;
+      overflow: auto;
+      border: none;
+      border-radius: .5em;
+      box-shadow: 1px 1px .5em black inset;
+  }
     table {
       margin-top: 15px;
       width: 100%;

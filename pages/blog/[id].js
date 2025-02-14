@@ -1,8 +1,9 @@
 import Head from "next/head";
 import { client } from "../../libs/client";
 import Header from '../../components/header';
-import Link from 'next/link';
-// import styles from "../../styles/Blog.module.css";
+import Prism from 'prismjs'; 
+import 'prismjs/themes/prism-dark.css'; 
+import 'prismjs/components/prism-javascript'; 
 import { useEffect } from 'react';
 import $ from 'jquery'
 export default function BlogId({ blog,category }) {
@@ -12,7 +13,10 @@ export default function BlogId({ blog,category }) {
     $('.kiji').each(function(){
       $(this).html($(this).html().replace(/\n/g,"<br>"))
   })
+  // Prism.jsを実行
+  Prism.highlightAll()
    }, []);
+  
   return (
     <>
     <Head>
