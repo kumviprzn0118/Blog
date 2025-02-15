@@ -29,7 +29,7 @@ export default function BlogId({ blog, category }) {
                 <ul className="category_ul">
                   {blog.category.map((category) => (
                     <li className="category_list" key={category.id}>
-                      {category.name}
+                      {category.name2}
                     </li>
                   ))}
                 </ul>

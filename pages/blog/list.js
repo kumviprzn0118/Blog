@@ -50,11 +50,6 @@ export default function Home({ blog }) {
 
 
           </div>
-          <div className="side_content">
-            <div className="content"></div>
-            <div className="content"></div>
-            <div className="content"></div>
-          </div>
         </div>
       </main>
     </div>

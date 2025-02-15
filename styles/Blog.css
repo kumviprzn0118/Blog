@@ -132,6 +132,9 @@
       }
     }
     .contents_wrap{
+      .content{
+        display: block;
+      }
       width: auto;
       .main_content{
         .blog_area {
