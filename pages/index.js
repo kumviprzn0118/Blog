@@ -48,7 +48,8 @@ export default function Home({ blog,category }) {
           <section className="content">
             <h1>資格</h1>
             <div className="simplebox1">
-              <p>2025年3月 : 基本情報技術者試験　合格</p>
+              <p>2025年3月 : 基本情報技術者試験 受験予定</p>
+              <p>2025年4月 : AWS Cloud Practitioner 受験予定</p>
             </div>
           </section>
           <section className="content">

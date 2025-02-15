@@ -28,7 +28,7 @@ export default function Home({ blog }) {
           <div className="main_content">
             <div className="content">
               <h1>記事一覧</h1>
-              <ul>
+              <ul className={styles.blog_ul}>
                 {blog.map((blog) => (
                   <li className={styles.blog_list} key={blog.id}>
                     <Link className={styles.link} href={`/blog/${blog.id}`}>

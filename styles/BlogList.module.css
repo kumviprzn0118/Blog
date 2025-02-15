@@ -70,10 +70,16 @@
   border: 1px solid #ddd;
   margin: 5px;
 }
+.blog_ul{
+display: flex;
+flex-wrap: wrap;
+}
 .blog_list{
   border: 1px solid #ddd;
   list-style-type:none ;
   margin: 5px;
+  max-width: 400px;
+  width: 100%;
 }
 .blog_title{
   margin: 5px;
