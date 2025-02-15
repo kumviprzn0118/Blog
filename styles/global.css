@@ -560,9 +560,6 @@ a {
     .main_content h1{
       font-size: 1.2rem;
     }
-    .content{
-      display: block;
-    }
   }
   /* お知らせ */
   .news_li{

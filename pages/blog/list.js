@@ -38,7 +38,7 @@ export default function Home({ blog }) {
                       )}
                     </div>
 
-                      <div className="wrap_info">
+                      <div className={styles.wrap_info}>
                         <div className={styles.blog_title}>{blog.title}</div>
                         <div className={styles.day}>作成日：<span className="publishedat">{blog.createdAt}</span></div>
                       </div>
