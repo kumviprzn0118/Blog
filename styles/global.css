@@ -529,7 +529,7 @@ a {
   }
   .simplebox1 {
 
-      padding: 20px 25px;
+      padding-top: 20px;
       padding-bottom: 0;
       box-sizing: border-box;
       width: 90%;

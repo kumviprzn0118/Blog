@@ -36,7 +36,7 @@ export default function Home({ blog,category }) {
             <div className="simplebox1">
               <p>名前 : Kuma</p>
               <p>職業 : Web開発エンジニア 4年目</p>
-              <p>趣味 : スポーツ観戦・プログラミング・数学</p>
+              <p>趣味 : プログラミング・アニメ・猫</p>
             </div>
           </section>
           <section className="content">
@@ -48,11 +48,7 @@ export default function Home({ blog,category }) {
           <section className="content">
             <h1>資格</h1>
             <div className="simplebox1">
-              <p>名前 : Kuma</p>
-              <p>年齢 : 20代後半</p>
-              <p>出身 : 宮崎</p>
-              <p>職業 : Web開発エンジニア</p>
-              <p>趣味 : アニメ・ゲーム・プログラミング・数学</p>
+              <p>2025年3月 : 基本情報技術者試験　合格</p>
             </div>
           </section>
           <section className="content">

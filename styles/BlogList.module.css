@@ -16,7 +16,18 @@
   width:65%;
   margin: 40px 30px 30px 30px;
 }
-
+.day{
+  opacity: .5;
+  font-size: 12px;
+}
+.img_wrapper{
+  display: flex;
+  align-items: center;
+}
+.img{
+  width:160px;
+  height: 90px;
+}
 .motto{
   text-align: center;
 }
@@ -33,6 +44,10 @@
   }
   .li{
     width: 100%;
+  }
+  .img{
+    width:120px;
+    height: 67.5px;
   }
 }
 /* ブロック */
