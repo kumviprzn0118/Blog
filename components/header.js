@@ -5,7 +5,7 @@ const Header = () => {
     <>
   <header className="header">
     <div className="navtext-container">
-      <div className="navtext">KUM_Blog</div>
+      <div className="navtext"></div>
     </div>
     <input type="checkbox" className="menu-btn" id="menu-btn"/>
     <label htmlFor="menu-btn" className="menu-icon"><span className="navicon"></span></label>

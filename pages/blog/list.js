@@ -29,7 +29,7 @@ export default function Home({ blog }) {
               <li className={styles.blog_list} key={blog.id}>
                   <Link className={styles.link} href={`/blog/${blog.id}`}>
                   {blog.image && blog.image.url && (
-                  <img className={styles.img} src={blog.image.url} alt={blog.title} />
+                  <img className={styles.img} src={blog.image.url} alt={blog.title} height={90} width={160} />
                   )}
                   <div className="wrap_info">
                   <div className={styles.blog_title}>{blog.title}</div>

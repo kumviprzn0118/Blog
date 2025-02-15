@@ -21,7 +21,7 @@ export default function Home({ blog,category }) {
     <>
     <div className="all_wrap">
       <Head>
-        <title>Profile</title>
+        <title>ホーム</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
@@ -56,7 +56,7 @@ export default function Home({ blog,category }) {
             </div>
           </section>
           <section className="content">
-          <h1 className="h1">BLOG</h1>
+          <h1 className="h1">技術ブログ</h1>
           <div className="blog_wrapper">
             <Swiper2 data={blog}></Swiper2>
           </div>
