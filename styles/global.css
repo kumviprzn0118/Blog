@@ -24,6 +24,7 @@ a {
   font-weight: bold;
   display: inline-block;
   cursor: pointer;
+  word-break: break-all;
 }
 /* Global styles */
 .all_wrap {
@@ -551,12 +552,16 @@ a {
     .contents_wrap .main_content{
       width: 95%;
       margin: 0 auto;
+      padding: 0;
     }
     .contents_wrap{
       display: block;
     }
     .main_content h1{
       font-size: 1.2rem;
+    }
+    .content{
+      display: block;
     }
   }
   /* お知らせ */
