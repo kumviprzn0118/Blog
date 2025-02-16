@@ -6,7 +6,9 @@ import $ from 'jquery'
 import { useEffect } from 'react';
 import { client } from "../../libs/client";
 import Script from 'next/script'
-export default function Home({ blog,newblog }) {
+export default function Home({ blog }) {
+    const [currentPage, setCurrentPage] = useState(1);
+    const postsPerPage = 10;
   useEffect(() => {
     $('.blog_publish_time').each(function () {
       $(this).html($(this).html().slice(0, 10));
@@ -17,6 +19,11 @@ export default function Home({ blog,newblog }) {
     })
 
    }, []);
+   const indexOfLastPost = currentPage * postsPerPage;
+   const indexOfFirstPost = (currentPage-1) * postsPerPage + 1;
+   const currentPosts = blog.slice(indexOfFirstPost, indexOfLastPost);
+   const totalPages = Math.ceil(blog.length / postsPerPage);
+
   return (
     <div>
       <Head>
@@ -30,7 +37,7 @@ export default function Home({ blog,newblog }) {
             <div className="content">
               <h1>記事一覧</h1>
               <ul className={styles.blog_ul}>
-                {blog.map((blog) => (
+                {currentPosts.map((blog) => (
                   <li className={styles.blog_list} key={blog.id}>
                     <Link className={styles.link} href={`/blog/${blog.id}`}>
                     <div className={styles.img_wrapper}>
@@ -48,9 +55,26 @@ export default function Home({ blog,newblog }) {
                 ))}
               </ul>
             </div>
-
-
           </div>
+          <div className={styles.pagination}>
+              {currentPage > 1 && (
+                <button onClick={() => paginate(currentPage - 1)}>前へ</button>
+              )}
+
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNumber) => (
+                <button
+                  key={pageNumber}
+                  onClick={() => paginate(pageNumber)}
+                  className={currentPage === pageNumber ? styles.active : ''}
+                >
+                  {pageNumber}
+                </button>
+              ))}
+
+              {currentPage < totalPages && (
+                <button onClick={() => paginate(currentPage + 1)}>次へ</button>
+              )}
+            </div>
         </div>
       </main>
     </div>
@@ -69,11 +93,9 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const id = context.params.id;
   const data = await client.get({ endpoint: "blog", queries: { filters: `category[contains]${id}` } });
-  const newdata = await client.get({ endpoint: 'blog', queries: { limit: 3 } })
   return {
     props: {
-      blog: data.contents,
-      newblog:newdata.contents
+      blog: data.contents
     },
   };
 };

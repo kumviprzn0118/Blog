@@ -56,7 +56,7 @@ export default function Home({ blog }) {
                 ))}
               </ul>
             </div>
-            {/* ページネーション */}
+       
             <div className={styles.pagination}>
               {currentPage > 1 && (
                 <button onClick={() => paginate(currentPage - 1)}>前へ</button>
