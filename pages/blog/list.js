@@ -8,7 +8,7 @@ import { client } from "../../libs/client";
 import Script from 'next/script';
 export default function Home({ blog }) {
   const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 10;
+  const postsPerPage = 5;
   useEffect(() => {
     $('.blog_publish_time').each(function () {
       $(this).html($(this).html().slice(0, 10));
@@ -56,26 +56,28 @@ export default function Home({ blog }) {
                 ))}
               </ul>
             </div>
-       
-            <div className={styles.pagination}>
-              {currentPage > 1 && (
-                <button onClick={() => paginate(currentPage - 1)}>前へ</button>
-              )}
 
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNumber) => (
-                <button
-                  key={pageNumber}
-                  onClick={() => paginate(pageNumber)}
-                  className={currentPage === pageNumber ? styles.active : ''}
-                >
-                  {pageNumber}
-                </button>
-              ))}
+            {currentPage > 1 && (
+              <div className={styles.pagination}>
+                {currentPage > 1 && (
+                  <button className={styles.prev} onClick={() => paginate(currentPage - 1)}>前へ</button>
+                )}
 
-              {currentPage < totalPages && (
-                <button onClick={() => paginate(currentPage + 1)}>次へ</button>
-              )}
-            </div>
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNumber) => (
+                  <button
+                    key={pageNumber}
+                    onClick={() => paginate(pageNumber)}
+                    className={currentPage === pageNumber ? styles.active : styles.otherpage}
+                  >
+                    {pageNumber}
+                  </button>
+                ))}
+
+                {currentPage < totalPages && (
+                  <button className={styles.next} onClick={() => paginate(currentPage + 1)}>次へ</button>
+                )}
+              </div>
+            )}
 
 
           </div>

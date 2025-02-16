@@ -84,6 +84,39 @@ flex-wrap: wrap;
 .blog_title{
   margin: 5px;
 }
+.pagination{
+  padding-top: 40px;
+  text-align: center;
+}
+.next,.prev{
+  cursor: pointer;
+  background-color: unset;
+  font-size: 20px;
+  font-weight: bold;
+  color: #4b4b4b;
+  border: none;
+  margin: 0 0.5rem;
+}
+.otherpage{
+  cursor: pointer;
+  background-color: unset;
+  font-size: 20px;
+  font-weight: bold;
+  color: #4b4b4b;
+  border: none;
+  width: 1rem;
+  margin: 0 0.5rem;
+}
+.active{
+  background-color: unset;
+  font-size: 20px;
+  font-weight: bold;
+  color: #4b4b4b;
+  border: none;
+  width: 1rem;
+  margin: 0 0.5rem;
+  border-bottom: 2px solid #4b4b4b;
+}
 /* サイド  */
 .contents_wrap .side_content{
   width:35%;
