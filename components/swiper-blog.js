@@ -27,7 +27,7 @@ const Swiper2 = ({data}) => {
                 slidesPerView: 2,
                 spaceBetween: 50
               },
-              425: {
+              450: {
                 slidesPerView: 2,
                 spaceBetween: 15
               }
