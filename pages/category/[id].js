@@ -55,7 +55,7 @@ export default function Home({ blog }) {
                 ))}
               </ul>
             </div>
-            {currentPage > 1 && (
+            {totalPages > 1 && (
               <div className={styles.pagination}>
                 {currentPage > 1 && (
                   <button className={styles.prev} onClick={() => paginate(currentPage - 1)}>前へ</button>

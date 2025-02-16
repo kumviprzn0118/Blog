@@ -8,7 +8,7 @@ import { client } from "../../libs/client";
 import Script from 'next/script';
 export default function Home({ blog }) {
   const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 5;
+  const postsPerPage = 10;
   useEffect(() => {
     $('.blog_publish_time').each(function () {
       $(this).html($(this).html().slice(0, 10));
@@ -57,7 +57,7 @@ export default function Home({ blog }) {
               </ul>
             </div>
 
-            {currentPage > 1 && (
+            {totalPages > 1 && (
               <div className={styles.pagination}>
                 {currentPage > 1 && (
                   <button className={styles.prev} onClick={() => paginate(currentPage - 1)}>前へ</button>
