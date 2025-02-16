@@ -507,7 +507,8 @@ a {
     
     code {
       font-family: monospace;
-      background-color: #999;
+      background-color: #4d4033;
+      color: #fff;
       padding: 2px 4px!important;
       border-radius: 3px;
     }
