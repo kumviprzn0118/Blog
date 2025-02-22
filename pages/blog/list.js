@@ -2,20 +2,16 @@ import Head from "next/head";
 import Header from '../../components/header';
 import Link from 'next/link';
 import styles from "../../styles/BlogList.module.css";
-import $ from 'jquery'
 import { useEffect, useState } from 'react';
 import { client } from "../../libs/client";
-import Script from 'next/script';
 export default function Home({ blog }) {
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 10;
   useEffect(() => {
-    $('.blog_publish_time').each(function () {
-      $(this).html($(this).html().slice(0, 10));
-    })
-    $('.publishedat').each(function () {
-      let txt = String($(this).text().match(/([0-9]{4}-[0-9]{2}-[0-9]{2})/)).split(',')[0]
-      $(this).text(txt)
+    const $publishedat = document.querySelectorAll('.publishedat');
+    Array.from($publishedat).map(node =>{
+      const node_txt = node.innerHTML;
+      node.innerHTML = String(node_txt.match(/([0-9]{4}-[0-9]{2}-[0-9]{2})/)).split(',')[0]
     })
   }, []);
   const indexOfLastPost = currentPage * postsPerPage;

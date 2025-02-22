@@ -13,8 +13,8 @@ const Swiper2 = ({data}) => {
             spaceBetween={15}
             centeredSlides={true}
             slidesPerView={1}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
+            // onSlideChange={() => console.log('slide change')}
+            // onSwiper={(swiper) => console.log(swiper)}
             wrapperClass="ul-blog"
             autoplay={true}
             loop={true}

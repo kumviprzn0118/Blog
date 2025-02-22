@@ -13,8 +13,8 @@ const Swiper1 = ({image}) => {
             spaceBetween={500}
             slidesPerView={1}
             centeredSlides={true}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
+            // onSlideChange={() => console.log('slide change')}
+            // onSwiper={(swiper) => console.log(swiper)}
             modules={[Pagination]}
             pagination={{
               clickable: false

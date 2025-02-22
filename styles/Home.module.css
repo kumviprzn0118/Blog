@@ -27,3 +27,16 @@
     }
   }
 }
+.color_change{
+  display: flex;
+  justify-content:flex-end;
+  padding-right: 15px;
+  .bg_black{
+    width: 20px;
+    background: #000;
+  }
+  .bg_444257{
+    width: 20px;
+    background: rgb(44, 42, 57);
+  }
+}

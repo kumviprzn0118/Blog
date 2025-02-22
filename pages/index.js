@@ -3,22 +3,20 @@ import Header from '../components/header';
 import Swiper1 from '../components/swiper-head';
 import Swiper2 from '../components/swiper-blog';
 import styles from "../styles/Home.module.css";
-import $ from 'jquery'
-import { useEffect } from 'react';
+import { useEffect, useState  } from 'react';
 import { client } from "../libs/client";
 import Link from 'next/link';
 // import { Swiper, SwiperSlide } from "swiper";
 import { motion } from 'framer-motion';
 // import AnimatePresence from 
 export default function Home({ blog, category }) {
-  useEffect((blog) => {
-    $('[class*="Home_news_time"]').each(function () {
-      $(this).html($(this).html().slice(0, 10));
-    })
-    console.log(blog)
-  }, []);
+  const [color,setColor] = useState("bg-black");
+  const setcolor = (classname) => setColor(classname);
+  // useEffect((blog) => {
+  //   console.log(blog)
+  // }, []);
   return (
-    <>
+    <div className="page_top">
       <div className="all_wrap">
         <Head>
           <title>ホーム</title>
@@ -26,6 +24,10 @@ export default function Home({ blog, category }) {
         </Head>
         <Header />
         <main>
+        <div className={styles.color_change}>
+          <div id="bg_black" onClick={()=>setcolor("bg-black")} className={styles.bg_black}>&nbsp;</div>
+          <div id="bg_444257" onClick={()=>setcolor("bg-444257")} className={styles.bg_444257}>&nbsp;</div>
+        </div>
           <div className="contents_wrap">
             <div className="main_content">
               <h1>自己紹介</h1>
@@ -56,7 +58,7 @@ export default function Home({ blog, category }) {
               </section>
             </div>
           </div>
-          <div className="contents_wrap bg-black">
+          <div className={`contents_wrap ${color}`}>
             <div className="main_content">
               <h1 className="h1">技術ブログ</h1>
               <section className="content flex reverse">
@@ -77,7 +79,7 @@ export default function Home({ blog, category }) {
           </div>
         </main>
       </div>
-    </>
+    </div>
   );
 }
 export const getStaticProps = async (context) => {
