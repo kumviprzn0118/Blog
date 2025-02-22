@@ -26,7 +26,7 @@ export default function Home({ blog }) {
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   return (
-    <div>
+    <div className="change_header_color">
       <Head>
         <title>記事一覧</title>
         <link rel="icon" href="/favicon.ico" />

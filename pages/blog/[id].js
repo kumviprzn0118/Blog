@@ -12,7 +12,7 @@ export default function BlogId({ blog, category }) {
   }, []);
 
   return (
-    <>
+    <div className="change_header_color">
       <Head>
         <title>{blog.title}</title>
         <link rel="icon" href="/favicon.ico" />
@@ -39,7 +39,7 @@ export default function BlogId({ blog, category }) {
           </div>
         </div>
       </main>
-    </>
+    </div>
   );
 }
 
