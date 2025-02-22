@@ -5,10 +5,15 @@
   .img_wrapper{
     width: 130px;
     .circle{
+      min-width: 130px;
       width: 100%;
       border-radius: 50%;
     }
   }
+}
+.blog_flex{
+  display: flex;
+  align-items: center;
 }
 @media screen and (max-width:767px) {
   .profile_flex{
@@ -21,7 +26,8 @@
       text-align: center;
       width: 100%;
       .circle{
-        width: 130px;
+        min-width: 180px;
+        width: 30%;
         border-radius: 50%;
       }
     }

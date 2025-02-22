@@ -3,14 +3,14 @@ import Header from '../components/header';
 import Swiper1 from '../components/swiper-head';
 import Swiper2 from '../components/swiper-blog';
 import styles from "../styles/Home.module.css";
-import { useEffect, useState  } from 'react';
+import { useEffect, useState } from 'react';
 import { client } from "../libs/client";
 import Link from 'next/link';
 // import { Swiper, SwiperSlide } from "swiper";
 import { motion } from 'framer-motion';
 // import AnimatePresence from 
 export default function Home({ blog, category }) {
-  const [color,setColor] = useState("bg-black");
+  const [color, setColor] = useState("bg-black");
   const setcolor = (classname) => setColor(classname);
   // useEffect((blog) => {
   //   console.log(blog)
@@ -24,23 +24,26 @@ export default function Home({ blog, category }) {
         </Head>
         <Header />
         <main>
-        <div className={styles.color_change}>
-          <div id="bg_black" onClick={()=>setcolor("bg-black")} className={styles.bg_black}>&nbsp;</div>
-          <div id="bg_444257" onClick={()=>setcolor("bg-444257")} className={styles.bg_444257}>&nbsp;</div>
-        </div>
+          <div className={styles.color_change}>
+            <div id="bg_black" onClick={() => setcolor("bg-black")} className={styles.bg_black}>&nbsp;</div>
+            <div id="bg_444257" onClick={() => setcolor("bg-444257")} className={styles.bg_444257}>&nbsp;</div>
+          </div>
           <div className="contents_wrap">
             <div className="main_content">
               <h1>自己紹介</h1>
               <section className="content flex">
                 <div className="flex-text">
-                <h4>基本情報</h4>
+                  <h4>基本情報</h4>
                   <div className="simplebox1">
                     <div className={styles.profile_flex}>
                       <div>
-
                         <p>名前 : Kuma</p>
                         <p>職業 : フロントエンドエンジニア 4年目</p>
-                        <p>趣味 : プログラミング・アニメ・猫</p>
+                        <p>趣味 : プログラミング・ゲーム</p>
+                        <p>最終学歴 : K大学 工学部 卒業</p>
+                        <p>好きな食べ物 : チーズケーキ</p>
+                        <p>得意料理 : チキン南蛮</p>
+                        <p></p>
                       </div>
                       <div className={styles.img_wrapper}><img className={styles.circle} src="/chacha.jpg"></img></div>
                     </div>
@@ -62,13 +65,15 @@ export default function Home({ blog, category }) {
             <div className="main_content">
               <h1 className="h1">技術ブログ</h1>
               <section className="content flex reverse">
-                <div className="flex-text">
-                  <ul>
-                    <li>インフラ</li>
-                    <li>フロントエンド</li>
-                    <li>バックエンド</li>
-                  </ul>
-                  <p>趣味でやってる学習についてのブログです。</p>
+                <div className={`flex-text ${styles.blog_flex}`}>
+                  <div className={`simplebox1`}>
+                    <h4>現在学習中のもの</h4>
+                    <ul>
+                      <li>インフラ<br></br>Amazon Web Services</li>
+                      <li>バックエンド<br></br>Ruby on Rails、Node.js</li>
+                      <li>フロントエンド<br></br>Javascript,Typescript,React,Vue,デザイン</li>
+                    </ul>
+                  </div>
                 </div>
                 <div className="blog_wrapper">
                   <Swiper2 data={blog}></Swiper2>
