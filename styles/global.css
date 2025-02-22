@@ -110,6 +110,7 @@ a {
     flex-wrap: wrap;
   }
   .flex-text{
+    padding: 15px 0;
     width: 100%;
   }
   .flex.reverse{

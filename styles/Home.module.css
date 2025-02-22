@@ -9,5 +9,21 @@
       border-radius: 50%;
     }
   }
-
+}
+@media screen and (max-width:767px) {
+  .profile_flex{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    .img_wrapper{
+      text-align: center;
+      width: 100%;
+      .circle{
+        width: 130px;
+        border-radius: 50%;
+      }
+    }
+  }
 }
