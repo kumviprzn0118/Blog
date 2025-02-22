@@ -24,11 +24,11 @@ const Swiper2 = ({data}) => {
             }}
             breakpoints={{
               767: {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 50
               },
               450: {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 15
               }
             }}

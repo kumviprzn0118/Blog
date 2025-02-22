@@ -55,6 +55,7 @@
 }
 /* ブロック */
 .link{
+  color: #4b4b4b;
   padding: 15px;
   width: 100%;
   display: flex;
