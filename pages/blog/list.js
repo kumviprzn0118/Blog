@@ -89,7 +89,7 @@ export default function Home({ blog }) {
 
 export const getStaticProps = async () => {
   const data = await client.get({
-    endpoint: 'blog',
+    endpoint: 'blog', queries: { limit: 1000 }
   });
 
   return {

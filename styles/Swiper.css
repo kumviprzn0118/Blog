@@ -67,6 +67,7 @@
               font-size: 18px;
             }
             div{
+              color: var(--swiper-slide-color);
               font-weight: normal;
             }
           }

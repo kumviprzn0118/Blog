@@ -41,7 +41,7 @@ a {
 .contents_wrap {
   display: flex;
   justify-content: space-between;
-  padding: 0 15px;
+  padding: 15px;
 }
 
 
@@ -79,17 +79,23 @@ a {
 
 /* コンテンツ */
 .content {
-  padding: 0 1rem;
   border-radius: 5px;
 }
-.content.flex {
+.bg-black {
+  background-color: #000;
+}
+.flex {
   display: flex;
 }
 .flex.reverse{
   flex-direction:row-reverse;
 }
 .flex-text{
+  padding: 15px;
   width: 50%;
+  ul,ol,li{
+    margin-left: 0.5rem;
+  }
 }
 .blog_wrapper{
   width: 50%;

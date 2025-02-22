@@ -1,0 +1,13 @@
+.profile_flex{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  .img_wrapper{
+    width: 130px;
+    .circle{
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+
+}

@@ -28,38 +28,53 @@ export default function Home({ blog, category }) {
         <main>
           <div className="contents_wrap">
             <div className="main_content">
+              <h1>自己紹介</h1>
               <section className="content flex">
                 <div className="flex-text">
-                  <h1>自己紹介</h1>
+                <h4>基本情報</h4>
                   <div className="simplebox1">
-                    <p>名前 : Kuma</p>
-                    <p>職業 : Web開発エンジニア 4年目</p>
-                    <p>趣味 : プログラミング・アニメ・猫</p>
+                    <div className={styles.profile_flex}>
+                      <div>
+
+                        <p>名前 : Kuma</p>
+                        <p>職業 : フロントエンドエンジニア 4年目</p>
+                        <p>趣味 : プログラミング・アニメ・猫</p>
+                      </div>
+                      <div className={styles.img_wrapper}><img className={styles.circle} src="/chacha.jpg"></img></div>
+                    </div>
                   </div>
-                  <h1>資格</h1>
+                  <h4>資格</h4>
                   <div className="simplebox1">
                     <p>2025年3月 : 基本情報技術者試験 受験予定</p>
-                    <p>2025年4月 : AWS Cloud Practitioner 受験予定</p>
+                    <p>2025年4月 : AWS Certified Cloud Practitioner 受験予定</p>
+                    <p>2025年6月 : AWS Certified Solutions Architect - Associate 受験予定</p>
                   </div>
                 </div>
-                <Swiper1 image={["/jikogakusyu.png", "/jikogakusyu.png", "/jikogakusyu.png"]}></Swiper1>
+                <div className="blog_wrapper">
+                  <Swiper1 image={["/jikogakusyu.png", "/jikogakusyu.png", "/jikogakusyu.png"]}></Swiper1>
+                </div>
               </section>
+            </div>
           </div>
-          </div>
-            <div className="contents_wrap">
+          <div className="contents_wrap bg-black">
             <div className="main_content">
-            <h1 className="h1">技術ブログ</h1>
+              <h1 className="h1">技術ブログ</h1>
               <section className="content flex reverse">
                 <div className="flex-text">
-                  <p>個人開発・など。</p>
+                  <ul>
+                    <li>インフラ</li>
+                    <li>フロントエンド</li>
+                    <li>バックエンド</li>
+                  </ul>
+                  <p>趣味でやってる学習についてのブログです。</p>
                 </div>
                 <div className="blog_wrapper">
                   <Swiper2 data={blog}></Swiper2>
                 </div>
               </section>
               <div className="center"><a className="btn-border" href="/blog/list">もっと見る</a></div>
-              </div>
             </div>
+          </div>
         </main>
       </div>
     </>
@@ -68,7 +83,7 @@ export default function Home({ blog, category }) {
 export const getStaticProps = async (context) => {
 
   const [blogData, categoryData] = await Promise.all([
-    client.get({ endpoint: 'blog', queries: { limit: 5 } }),
+    client.get({ endpoint: 'blog', queries: { limit: 8 } }),
     client.get({ endpoint: "categories" }),
   ]);
 
